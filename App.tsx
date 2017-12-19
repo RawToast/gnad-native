@@ -1,14 +1,21 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Provider } from 'react-redux'
+
+import { StyleSheet, View } from 'react-native'
+import GameText from './app/components/GameText'
+import GameInput from './app/components/GameInput'
+import Store from './app/store'
 
 export default class App extends React.Component<{}> {
+  store = Store()
   render () {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.ts to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu!</Text>
-      </View>
+      <Provider store={this.store}>
+        <View style={styles.container}>
+          <GameText/>
+          <GameInput/>
+        </View>
+      </Provider>
     )
   }
 }
