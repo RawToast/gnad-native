@@ -15,7 +15,6 @@ export const sendInput: (id: string, input: string) => Promise<SlackServerRespon
         },
         body: 'user_id=' + id + '&text=' + input
       }).then((response: any) => {
-        console.log('Response', response)
         return response.json()
       }).catch(err => console.log('Unexpected error', err))
     }
@@ -28,7 +27,6 @@ export const createGame: (id: string) => Promise<SlackServerResponse> = (id: str
     },
     body: 'user_id=' + id
   }).then((response: any) => {
-    console.log('Response', response)
     return response.json()
   }).catch(err => console.log('Unexpected error', err))
 }

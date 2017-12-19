@@ -10,7 +10,7 @@ const GameInput = (props: GameInputProps) => {
     <View>
       <TextInput
         placeholder='Commands here'
-        onSubmitEditing={(text) => props.sendRequest(props.gameId, text)}
+        onSubmitEditing={(event) => props.sendRequest(props.gameId, event.nativeEvent.text)}
       />
       <Button
         title="Make new"
