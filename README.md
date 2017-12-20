@@ -5,6 +5,8 @@
 Simple frontend for [Go North And Die](https://github.com/RawToast/go-north-and-die) built using TypeScript, 
 React-Native, and Exponent.
 
+This frontend currently is not concerned with UX. It is only for aiding the development of Go North.
+
 ## Table of Contents
 
 * [Updating to New Releases](#updating-to-new-releases)

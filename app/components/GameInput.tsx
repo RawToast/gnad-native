@@ -11,7 +11,9 @@ const GameInput = (props: GameInputProps) => {
       <TextInput
         placeholder='Commands here'
         onSubmitEditing={(event) => props.sendRequest(props.gameId, event.nativeEvent.text)}
-      />
+        clearTextOnFocus={true}
+      >
+      </TextInput>
       <Button
         title="Make new"
         onPress={() => props.createGame(props.gameId)}
